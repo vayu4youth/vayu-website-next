@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+.font-sanskrit    { font-family: 'Tiro Devanagari Sanskrit', serif; }
+.font-playfair    { font-family: 'Playfair Display', serif; }
+.font-cormorant   { font-family: 'Cormorant Garamond', serif; }
+.font-source-sans { font-family: 'Source Sans 3', sans-serif; }
+.font-nunito      { font-family: 'Nunito', sans-serif; }

@@ -1,0 +1,41 @@
+export default function Footer() {
+    return (
+        <footer className="bg-orange-50 border-t border-orange-200">
+            <div className="max-w-7xl mx-auto px-6 py-12">
+                <div className="text-center">
+                    <div className="flex items-center justify-center gap-3 mb-6">
+                        <img src="/logos/APSA_logo.png" alt="APSA Logo" className="w-16 h-16 object-contain" />
+                        <span className="text-2xl font-bold text-[#C42727] font-['Playfair_Display'] tracking-widest">
+              VAYU
+            </span>
+                        <img src="/logos/VAYU_logo.png" alt="VAYU Logo" className="w-16 h-16 object-contain rounded-full" />
+                    </div>
+                    <p className="text-2xl md:text-3xl text-[#790016] mb-2" style={{ fontFamily: "serif" }}>
+                        समानी व आकूतिः। समाना हृदयानि वः।
+                    </p>
+                    <p className="text-lg text-[#D7572A] italic mb-2 font-['Source_Sans_3']">
+                        Let our resolutions be the same. Let our hearts be the same.
+                    </p>
+                    <p className="text-sm text-[#F09304] mb-2" style={{ fontFamily: "'Nunito'" }}>
+                        (Rigveda 10.191.4)
+                    </p>
+                    <div className="mt-8 pt-6 border-t border-[#F09304]">
+                        <p className="text-[#790016] font-semibold font-['Playfair_Display']">
+                            VAYU – Vedic Association for Youth Unity
+                        </p>
+                        <p className="mt-2 text-[#D7572A] italic text-sm font-['Source_Sans_3']">
+                            An{" "}
+                            <a href="http://aryasamaj.com" target="_blank" rel="noopener noreferrer">
+                                <u>APSA</u>
+                            </a>{" "}
+                            Initiative
+                        </p>
+                        <p className="text-[#F09304] text-sm mt-2" style={{ fontFamily: "'Nunito'" }}>
+                            Reconnecting youth with their heritage.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+}
