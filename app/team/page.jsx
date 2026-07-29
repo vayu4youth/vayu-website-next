@@ -62,13 +62,6 @@ const teamSections = [
                 linkedin: "https://www.linkedin.com/in/asmiemann/",
             },
             {
-                name: "Khrish Senthilkumar",
-                role: "Outreach Coordinator",
-                bio: "Khrish is a dedicated student volunteer driven by a strong commitment to seva and community engagement. He focuses his efforts on organizational outreach, sharing educational resources, and raising awareness about Vedic knowledge.",
-                image: "/team/Khrish.jpeg",
-                email: "calmekhrish@gmail.com",
-            },
-            {
                 name: "Antara Malge",
                 role: "Events Coordinator",
                 bio: "Antara combines an academic focus with a strong background in recreational coaching, mentorship, and creative arts. She utilizes her organizational skills and passion for community involvement to coordinate engaging and impactful events.",
