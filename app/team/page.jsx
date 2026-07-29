@@ -197,6 +197,12 @@ export default function Team() {
                                         <MemberCard member={section.members[0]} index={0} />
                                     </div>
                                 </div>
+                            ) : section.members.length === 3 ? (
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                                    {section.members.map((member, index) => (
+                                        <MemberCard key={index} member={member} index={index} />
+                                    ))}
+                                </div>
                             ) : (
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                                     {section.members.map((member, index) => (
