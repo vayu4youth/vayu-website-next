@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Users, BookOpen, Home, Calendar } from "lucide-react";
+import { Users, BookOpen, Home, Calendar, Library } from "lucide-react";
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -13,7 +13,11 @@ export default function Navbar() {
         { name: "About",  path: "/about",  icon: BookOpen },
         { name: "Team",   path: "/team",   icon: Users },
         { name: "Events", path: "/events", icon: Calendar },
+        { name: "Knowledge Hub", path: "/knowledge-hub", icon: Library },
     ];
+
+    // Highlight a section's link on its sub-pages too (e.g. an article inside the Knowledge Hub).
+    const isActive = (path) => (path === "/" ? pathname === "/" : pathname === path || pathname.startsWith(`${path}/`));
 
     return (
         <nav className="fixed top-0 w-full z-50 bg-orange-50 border-b border-orange-200 shadow-sm">
@@ -28,13 +32,13 @@ export default function Navbar() {
             </span>
                     </Link>
 
-                    <div className="hidden md:flex items-center gap-8">
+                    <div className="hidden lg:flex items-center gap-8">
                         {navItems.map((item) => (
                             <Link
                                 key={item.name}
                                 href={item.path}
                                 className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-                                    pathname === item.path
+                                    isActive(item.path)
                                         ? "bg-orange-100 text-[#D7572A] shadow-sm"
                                         : "text-[#C42727] hover:text-[#790016] hover:bg-orange-50"
                                 }`}
@@ -47,7 +51,7 @@ export default function Navbar() {
 
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="md:hidden text-orange-600 p-2"
+                        className="lg:hidden text-orange-600 p-2"
                     >
                         <div className="space-y-1.5">
                             <span className="block w-6 h-0.5 bg-orange-600"></span>
@@ -58,14 +62,14 @@ export default function Navbar() {
                 </div>
 
                 {mobileMenuOpen && (
-                    <div className="md:hidden mt-4 pb-4 space-y-2">
+                    <div className="lg:hidden mt-4 pb-4 space-y-2">
                         {navItems.map((item) => (
                             <Link
                                 key={item.name}
                                 href={item.path}
                                 onClick={() => setMobileMenuOpen(false)}
                                 className={`flex items-center gap-2 px-4 py-3 rounded-lg transition-all ${
-                                    pathname === item.path
+                                    isActive(item.path)
                                         ? "bg-orange-100 text-[#D7572A]"
                                         : "text-[#C42727] hover:text-[#790016] hover:bg-orange-50"
                                 }`}

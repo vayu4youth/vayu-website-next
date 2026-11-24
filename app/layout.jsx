@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
+    metadataBase: new URL("https://vayuinternational.org"),
     title: "VAYU – Vedic Association for Youth Unity",
     description: "An APSA initiative reconnecting Hindu youth with their cultural and spiritual heritage.",
     icons: {
